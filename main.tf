@@ -24,6 +24,7 @@ module "iam-users" {
 }
 
 module "iam-groups" {
-  source = "./iam/groups"
-  iam-users = var.iam-users
+  source         = "./iam/groups"
+  iam-users      = var.iam-users
+  ec2admins-arns = var.ec2admins-arns
 } 
