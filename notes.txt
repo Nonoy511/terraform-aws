@@ -1,0 +1,2 @@
+#Example of destroying login profile
+aws iam delete-login-profile --user-name nonoytest1
