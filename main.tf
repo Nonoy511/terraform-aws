@@ -18,7 +18,12 @@ provider "aws" {
   profile = "nonoy-api-user"
 }
 
-module "iam" {
-  source = "./iam"
+module "iam-users" {
+  source    = "./iam/users"
   iam-users = var.iam-users
-}  
+}
+
+module "iam-groups" {
+  source = "./iam/groups"
+  iam-users = var.iam-users
+} 

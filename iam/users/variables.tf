@@ -1,5 +1,5 @@
 variable "iam-users" {
-  type = list(string)
+  type    = list(string)
   default = ["default-user"]
 }
 
