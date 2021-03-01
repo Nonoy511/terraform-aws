@@ -1,5 +1,6 @@
 variable "iam-users" {
   type = list(string)
+  default = ["default-user"]
 }
 
 #variable "ec2admins-arns" {

@@ -18,12 +18,7 @@ provider "aws" {
   profile = "nonoy-api-user"
 }
 
-resource "aws_iam_user" "iam-users" {
-  count         = length(var.iam-users)
-  name          = var.iam-users[count.index]
-  force_destroy = "true"
-}
-
-#module "iam" {
-#  source = "./iam"
-#}
+module "iam" {
+  source = "./iam"
+  iam-users = var.iam-users
+}  
